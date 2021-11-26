@@ -1,0 +1,50 @@
+@import "styles/commons/mixins";
+
+.button {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 400ms ease;
+
+  &-primary {
+    &-blue {
+      background: var(--primary);
+      color: var(--blue-secondary);
+      border-color: var(--primary);
+
+      &:hover {
+        color: var(--base);
+        box-shadow: 1px 1px 18px 0px rgba(191, 191, 191, 0.71);
+      }
+    }
+  }
+
+  &-secondary {
+    &-blue {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+
+      &:hover {
+        color: var(--base);
+        background: var(--primary);
+        box-shadow: 1px 1px 18px 0px rgba(191, 191, 191, 0.71);
+      }
+    }
+  }
+}
+
+@include desktop {
+  .button {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 16px 24px;
+    min-width: 400px;
+  }
+}

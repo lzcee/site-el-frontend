@@ -1,0 +1,29 @@
+@import "mixins";
+
+:root {
+  --container-margin: 24px;
+}
+
+@include tablet {
+  :root {
+    --container-margin: 48px;
+  }
+}
+
+@include desktop {
+  :root {
+    --container-margin: 75px;
+  }
+}
+
+@include desktop-lg {
+  :root {
+    --container-width: 1210px;
+    --container-margin: calc((100% - var(--container-width)) / 2);
+  }
+}
+
+.container {
+  margin-left: var(--container-margin);
+  margin-right: var(--container-margin);
+}
