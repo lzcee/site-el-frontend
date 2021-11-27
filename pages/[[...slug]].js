@@ -50,7 +50,7 @@ export async function getStaticPaths(context) {
 export async function getStaticProps(context) {
     const { params, locale, locales, defaultLocale, preview = null } = context
 
-    const globalLocale = 'pt-BR'
+    const globalLocale = await getGlobalData(locale)
     const pageData = await getPageData(
         { slug: !params.slug ? [""] : params.slug },
         locale,

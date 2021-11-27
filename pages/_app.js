@@ -22,11 +22,12 @@ const App = ({ Component, pageProps }) => {
 
 App.getInitialProps = async function (appContext) {
   const appProps = await NextApp.getInitialProps(appContext);
+  const globalLocale = await getGlobalData(appContext.router.locale);
 
   return {
     ...appProps,
     pageProps: {
-      global: 'pt-BR',
+      global: globalLocale,
     },
   };
 };
