@@ -1,14 +1,16 @@
 import styles from "./SectionTitle.module.scss";
 
 const SectionTitle = ({ children, className, color = "blue", ...rest }) => {
-  let sectionTitleClassName = `${styles.sectionTitle} ${styles.sectionTitle}-${styles[type]}`;
+  const sectionTitleColor = `sectionTitle-${color}`;
+  let sectionTitleClassName = `${styles.sectionTitle} ${styles[sectionTitleColor]}`;
 
   if (className) {
     sectionTitleClassName = `${sectionTitleClassName} ${className}`;
   }
+
   return (
     <h2 {...rest} className={sectionTitleClassName}>
-      {children}
+      <div className="container">{children}</div>
     </h2>
   );
 };

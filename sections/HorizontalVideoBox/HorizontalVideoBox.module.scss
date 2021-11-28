@@ -1,0 +1,45 @@
+@import "styles/commons/mixins";
+
+.horizontalVideoBox {
+  position: relative;
+  padding: 28px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 54px);
+    top: 54px;
+    left: 0;
+    background-color: var(--grayscale-2);
+    z-index: -1;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+
+  .contentWrapper {
+    
+  }
+}
+
+@include desktop {
+  .horizontalVideoBox {
+    position: relative;
+    padding: 58px 0;
+
+    &::before {
+      height: calc(100% - 116px);
+      top: 116px;
+    }
+
+    .title {
+      margin-bottom: 60px;
+    }
+
+    .contentWrapper {
+     
+    }
+  }
+}

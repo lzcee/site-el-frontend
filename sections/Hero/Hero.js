@@ -1,5 +1,5 @@
 import NextImage from "../../components/NextImage";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Button";
 
 import styles from "./Hero.module.scss";
 

@@ -41,7 +41,7 @@ const PreviewModeBanner = () => {
 
 const Sections = ({ sections, preview }) => {
   return (
-    <div>
+    <>
       {preview && <PreviewModeBanner />}
       {sections.map((section) => (
         <Section
@@ -49,7 +49,7 @@ const Sections = ({ sections, preview }) => {
           key={`${section.__component}${section.id}`}
         />
       ))}
-    </div>
+    </>
   );
 };
 

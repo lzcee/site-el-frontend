@@ -1,1 +1,1 @@
-export { default } from './HorizontalVideoBox';
+export { default } from "./HorizontalVideoBox";
