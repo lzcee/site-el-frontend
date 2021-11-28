@@ -10,7 +10,7 @@ const Button = ({
   let buttonClassName = `${styles.button} ${styles[type]}`;
 
   if (className) {
-    buttonClassName = `${buttonClassName} ${type}`;
+    buttonClassName = `${buttonClassName} ${className}`;
   }
 
   if (linkSettings) {

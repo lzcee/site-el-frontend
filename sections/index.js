@@ -1,26 +1,28 @@
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
-import Hero from "./Hero"
+import Hero from "./Hero";
+import HorizontalVideoBox from "./HorizontalVideoBox";
 
 const sectionComponents = {
   "sections.hero": Hero,
-}
+  "sections.horizontal-video-box": HorizontalVideoBox,
+};
 
 const Section = ({ sectionData }) => {
-  const SectionComponent = sectionComponents[sectionData.__component]
+  const SectionComponent = sectionComponents[sectionData.__component];
 
   if (!SectionComponent) {
-    return null
+    return null;
   }
 
-  return <SectionComponent data={sectionData} />
-}
+  return <SectionComponent data={sectionData} />;
+};
 
 const PreviewModeBanner = () => {
-  const router = useRouter()
+  const router = useRouter();
   const exitURL = `/api/exit-preview?redirect=${encodeURIComponent(
     router.asPath
-  )}`
+  )}`;
 
   return (
     <div className="py-4 bg-red-600 text-red-100 font-semibold uppercase tracking-wide">
@@ -34,8 +36,8 @@ const PreviewModeBanner = () => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Sections = ({ sections, preview }) => {
   return (
@@ -48,7 +50,7 @@ const Sections = ({ sections, preview }) => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Sections
+export default Sections;
