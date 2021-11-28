@@ -1,8 +1,17 @@
-html {
-  font-family: "Abhaya Libre", serif;
-}
-
 :root {
   --font-family-base: "Abhaya Libre", serif;
   --font-family-heading: "Barlow", sans-serif;
+}
+
+html {
+  font-family: var(--font-family-base);
+  color: var(--blue-secondary);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-heading);
 }

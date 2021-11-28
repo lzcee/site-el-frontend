@@ -1,16 +1,18 @@
 @import "styles/commons/mixins";
 
 .button {
+  display: inline-block;
+  text-align: center;
   font-size: 14px;
   line-height: 17px;
   font-weight: 700;
   font-family: var(--font-family-heading);
-  padding: 8px 16px;
+  padding: 16px 24px;
   border-radius: 100px;
   border: 1px solid;
   cursor: pointer;
   box-sizing: border-box;
-  transition: all 400ms ease;
+  transition: all 350ms ease;
 
   &-primary {
     &-blue {
@@ -19,8 +21,8 @@
       border-color: var(--primary);
 
       &:hover {
-        color: var(--base);
-        box-shadow: 1px 1px 18px 0px rgba(191, 191, 191, 0.71);
+        opacity: 0.8;
+        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.60);
       }
     }
   }
@@ -34,7 +36,7 @@
       &:hover {
         color: var(--base);
         background: var(--primary);
-        box-shadow: 1px 1px 18px 0px rgba(191, 191, 191, 0.71);
+        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.60);
       }
     }
   }
@@ -44,7 +46,6 @@
   .button {
     font-size: 24px;
     line-height: 32px;
-    padding: 16px 24px;
     min-width: 400px;
   }
 }
