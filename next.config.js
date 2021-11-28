@@ -10,6 +10,6 @@ module.exports = {
     defaultLocale: 'pt-BR',
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'i.ytimg.com'],
   },
 }

@@ -1,0 +1,21 @@
+@import "styles/commons/mixins";
+
+.richText {
+  font-size: 16px;
+  line-height: 22px;
+
+  p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@include desktop {
+  .richText {
+    font-size: 18px;
+    line-height: 24px;
+
+    p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

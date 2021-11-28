@@ -18,10 +18,6 @@
   .title {
     margin-bottom: 24px;
   }
-
-  .contentWrapper {
-    
-  }
 }
 
 @include desktop {
@@ -39,7 +35,9 @@
     }
 
     .contentWrapper {
-     
+        display: grid;
+        grid-template-columns: 592px 1fr;
+        column-gap: 136px;
     }
   }
 }

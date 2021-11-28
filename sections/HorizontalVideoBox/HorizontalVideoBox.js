@@ -1,5 +1,6 @@
-import ReactMarkdown from "react-markdown";
+import RichText from "../../components/RichText";
 import SectionTitle from "../../components/SectionTitle";
+import YoutubeIframe from "../../components/YoutubeIframe";
 import styles from "./HorizontalVideoBox.module.scss";
 
 const HorizontalVideoBox = ({ data }) => {
@@ -11,10 +12,8 @@ const HorizontalVideoBox = ({ data }) => {
       </SectionTitle>
       <div className="container">
         <div className={styles.contentWrapper}>
-          <ReactMarkdown className={styles.description}>
-            {data.Description}
-          </ReactMarkdown>
-          
+          <RichText className={styles.description}>{data.Description}</RichText>
+          <YoutubeIframe data={data.YoutubeVideo}/>
         </div>
       </div>
     </section>
