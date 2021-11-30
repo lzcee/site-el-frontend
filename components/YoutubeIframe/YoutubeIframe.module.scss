@@ -1,0 +1,80 @@
+.youtubeIframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+
+  .thumbnailWrapper,
+  .thumbnailWrapper::before,
+  .buttonPlay,
+  .iframe,
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .thumbnailWrapper,
+  .iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumbnailWrapper {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(
+        180deg,
+        #646464 0%,
+        rgba(0, 212, 255, 0) 100%
+      );
+      z-index: 1;
+    }
+  }
+
+  .buttonPlay,
+  .loader {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  .buttonPlay {
+    width: 68px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'%3E%3Cpath d='M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.6c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z' fill='red'/%3E%3Cpath d='M45 24 27 14v20' fill='%23fff'/%3E%3C/svg%3E");
+    filter: grayscale(100%);
+    transition: filter 150ms ease;
+    border: none;
+  }
+
+  .loader {
+    border: 5px solid var(--base);
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    z-index: -1;
+  }
+
+  &:hover {
+    .buttonPlay {
+      filter: none;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}

@@ -13,7 +13,7 @@ const HorizontalVideoBox = ({ data }) => {
       <div className="container">
         <div className={styles.contentWrapper}>
           <RichText className={styles.description}>{data.Description}</RichText>
-          <YoutubeIframe data={data.YoutubeVideo}/>
+          <YoutubeIframe className={styles.video} data={data.YoutubeVideo}/>
         </div>
       </div>
     </section>

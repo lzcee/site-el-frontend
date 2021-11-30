@@ -18,6 +18,12 @@
   .title {
     margin-bottom: 24px;
   }
+
+  .contentWrapper {
+    .video {
+      margin-top: 52px;
+    }
+  }
 }
 
 @include desktop {
@@ -35,9 +41,14 @@
     }
 
     .contentWrapper {
-        display: grid;
-        grid-template-columns: 592px 1fr;
-        column-gap: 136px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 136px;
+
+      .video {
+        margin-top: 0;
+      }
     }
   }
 }
