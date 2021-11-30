@@ -20,20 +20,6 @@
     height: 100%;
   }
 
-  .thumbnailWrapper {
-    &::before {
-      content: "";
-      width: 100%;
-      height: 60px;
-      background: linear-gradient(
-        180deg,
-        #646464 0%,
-        rgba(0, 212, 255, 0) 100%
-      );
-      z-index: 1;
-    }
-  }
-
   .buttonPlay,
   .loader {
     transform: translate(-50%, -50%);

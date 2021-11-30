@@ -16,7 +16,7 @@ const getThumbnail = (videoId) => {
 
 const YoutubeIframe = ({ data, className }) => {
   const [playing, setPlaying] = useState(false);
-  const videoId = getYoutubeID(data);
+  const videoId = getYoutubeID(data.Url);
 
   let youtubeIframeClassName = styles.youtubeIframe;
   if (className) {
@@ -37,7 +37,7 @@ const YoutubeIframe = ({ data, className }) => {
               width={16}
               height={9}
               src={getThumbnail(videoId)}
-              alt="teste"
+              alt={data.Title}
             />
           </div>
           <button className={styles.buttonPlay} onClick={playVideo} aria-label="Play Video"></button>
@@ -47,6 +47,7 @@ const YoutubeIframe = ({ data, className }) => {
         <iframe
           className={styles.iframe}
           frameBorder="0"
+          title={data.Title}
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
