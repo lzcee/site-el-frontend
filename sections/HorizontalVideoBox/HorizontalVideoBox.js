@@ -6,7 +6,7 @@ import styles from "./HorizontalVideoBox.module.scss";
 const HorizontalVideoBox = ({ data }) => {
   return (
     <section className={styles.horizontalVideoBox}>
-      <SectionTitle color="blue" className={styles.title}>
+      <SectionTitle color={data.Title.BackgroundColor} className={styles.title}>
         {data.Title.SmallTitle}
         <span>{data.Title.Title}</span>
       </SectionTitle>

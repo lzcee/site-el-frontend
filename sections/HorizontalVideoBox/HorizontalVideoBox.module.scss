@@ -15,10 +15,6 @@
     z-index: -1;
   }
 
-  .title {
-    margin-bottom: 24px;
-  }
-
   .contentWrapper {
     .video {
       margin-top: 52px;
@@ -34,10 +30,6 @@
     &::before {
       height: calc(100% - 116px);
       top: 116px;
-    }
-
-    .title {
-      margin-bottom: 60px;
     }
 
     .contentWrapper {
