@@ -1,0 +1,71 @@
+@import "styles/commons/mixins";
+
+.classesCarousel {
+  .carouselWrapper {
+    padding: 60px 0 24px;
+    background-color: var(--grayscale-2);
+
+    .classWrapper {
+      margin-top: 25px;
+      height: calc(100% - 25px);
+
+      .class {
+        position: relative;
+        padding: 24px;
+        overflow: visible;
+        height: 100%;
+        box-sizing: border-box;
+
+        .classBackgroundImage {
+          z-index: -1;
+        }
+
+        .classNumber {
+          position: absolute;
+          top: -25px;
+          left: 0;
+          color: var(--grayscale-5);
+          opacity: 0.75;
+          font-size: 40px;
+          line-height: 50px;
+          text-transform: uppercase;
+          text-shadow: 0px 0px 20px var(--base);
+        }
+
+        .classContent {
+          height: 100%;
+          box-sizing: border-box;
+          background-color: var(--base);
+          opacity: 0.9;
+          padding: 8px;
+
+          .classTitle {
+            margin-bottom: 8px;
+            font-weight: 700;
+            line-height: 22px;
+            font-family: var(--font-family-base);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .classesCarousel {
+    .carouselWrapper {
+      padding: 34px 0;
+
+      .class {
+        .classTitle {
+          font-size: 18px;
+        }
+
+        .classDescription {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

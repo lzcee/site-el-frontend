@@ -1,0 +1,97 @@
+@import "styles/commons/mixins";
+
+.carousel {
+  margin-bottom: 46px;
+
+  [class~="splide__arrow"] {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+
+    &[class~="splide__arrow--next"] {
+      right: 0;
+    }
+
+    &[class~="splide__arrow--prev"] {
+      left: 0;
+    }
+
+    svg {
+      fill: var(--grayscale-5);
+      height: 15px;
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  [class~="splide__pagination"] {
+    bottom: -46px;
+
+    [class*="splide__pagination__page"] {
+      background-color: var(--grayscale-4);
+      margin: 4px;
+    }
+
+    [class*="splide__pagination__page is-active"] {
+      background-color: var(--grayscale-5);
+      transform: scale(1.3);
+    }
+  }
+}
+
+@include tablet {
+  .carousel {
+    margin-bottom: 34px;
+
+    [class~="splide__arrow"] {
+      width: 34px;
+      height: 34px;
+
+      &[class~="splide__arrow--next"] {
+        right: 10px;
+      }
+
+      &[class~="splide__arrow--prev"] {
+        left: 10px;
+      }
+
+      svg {
+        height: 34px;
+      }
+    }
+
+    [class~="splide__pagination"] {
+      bottom: -38px;
+
+      [class*="splide__pagination__page"] {
+        margin: 5px;
+      }
+
+      [class*="splide__pagination__page is-active"] {
+        transform: none;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .carousel {
+    margin: 0 var(--container-margin);
+    
+    [class~="splide__arrow"] {
+      &[class~="splide__arrow--next"] {
+        right: 0;
+      }
+
+      &[class~="splide__arrow--prev"] {
+        left: 0;
+      }
+
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}
