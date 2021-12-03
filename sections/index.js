@@ -3,11 +3,13 @@ import { useRouter } from "next/router";
 import Hero from "./Hero";
 import HorizontalVideoBox from "./HorizontalVideoBox";
 import HoverPillarsBox from "./HoverPillarsBox";
+import ClassesCarousel from "./ClassesCarousel";
 
 const sectionComponents = {
   "sections.hero": Hero,
   "sections.horizontal-video-box": HorizontalVideoBox,
   "sections.hover-pillars-box": HoverPillarsBox,
+  "sections.classes-carousel": ClassesCarousel,
 };
 
 const Section = ({ sectionData }) => {
