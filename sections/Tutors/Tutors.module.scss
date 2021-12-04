@@ -1,0 +1,31 @@
+.tutors {
+    padding: 23px 0;
+
+    .title {
+        margin-bottom: 16px;
+    }
+
+    .tutorsWrapper {
+        .tutor {
+            .tutorProfile {
+                .tutorImageWrapper {
+                    position: relative;
+                    width: 125px;
+                    height: 125px;
+                    margin-bottom: 4px;
+                }
+
+                .tutorName {
+                    background-color: var(--primary);
+                    padding: 2px 36px 2px var(--container-margin);
+                    margin-left: calc(var(--container-margin) * -1);
+                    margin-bottom: 4px;
+                }
+
+                .tutorJob {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
