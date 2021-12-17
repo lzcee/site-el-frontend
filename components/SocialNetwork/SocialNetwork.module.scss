@@ -1,0 +1,15 @@
+.socialNetwork {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: opacity 350ms ease;
+
+  svg {
+    fill: var(--blue-secondary);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

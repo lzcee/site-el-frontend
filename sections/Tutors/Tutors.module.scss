@@ -1,31 +1,125 @@
+@import "styles/commons/mixins";
+
 .tutors {
-    padding: 23px 0;
+  padding: 23px 0;
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .tutorsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 280px));
+    grid-gap: 32px 56px;
+    justify-content: center;
+
+    .tutor {
+      .tutorProfile {
+        text-align: center;
+        margin-bottom: 12px;
+
+        .tutorImageWrapper {
+          position: relative;
+          width: 125px;
+          height: 125px;
+          margin: 0 auto 4px;
+        }
+
+        .tutorContent {
+          .tutorName {
+            background-color: var(--primary);
+            padding: 2px 0 2px var(--container-margin);
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+
+          .tutorJob {
+            font-size: 14px;
+            margin-bottom: 4px;
+          }
+
+          .tutorSocialNetworks {
+            margin-top: 12px;
+
+            .tutorSocialNetwork {
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+
+      .tutorDescription {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .tutors {
+    padding: 58px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 312px;
+      left: 0;
+      top: 0;
+      background-color: var(--primary);
+      z-index: -1;
+    }
 
     .title {
-        margin-bottom: 16px;
+      margin-bottom: 36px;
     }
 
     .tutorsWrapper {
-        .tutor {
-            .tutorProfile {
-                .tutorImageWrapper {
-                    position: relative;
-                    width: 125px;
-                    height: 125px;
-                    margin-bottom: 4px;
-                }
+      display: grid;
+      grid-template-columns: repeat(3, 280px);
+      column-gap: 100px;
+      justify-content: space-between;
 
-                .tutorName {
-                    background-color: var(--primary);
-                    padding: 2px 36px 2px var(--container-margin);
-                    margin-left: calc(var(--container-margin) * -1);
-                    margin-bottom: 4px;
-                }
+      .tutor {
+        .tutorProfile {
+          text-align: left;
+          margin-bottom: 10px;
+          border-bottom: 1px solid var(--primary);
 
-                .tutorJob {
-                    text-align: center;
-                }
+          .tutorImageWrapper {
+            width: 280px;
+            height: 300px;
+            margin-bottom: 8px;
+          }
+
+          .tutorContent {
+            display: grid;
+            grid-template-columns: 186px 1fr;
+            grid-column-gap: 20px;
+            align-items: center;
+
+            .tutorName {
+              background-color: transparent;
+              padding: 0;
             }
+
+            .tutorSocialNetworks {
+              display: flex;
+              justify-content: flex-end;
+              margin-top: 0;
+
+              .tutorSocialNetwork {
+                margin: 0 0 0 8px;
+              }
+            }
+          }
         }
+
+        .tutorDescription {
+          font-weight: 400;
+        }
+      }
     }
+  }
 }
