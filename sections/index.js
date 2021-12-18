@@ -6,6 +6,7 @@ import HoverPillarsBox from "./HoverPillarsBox";
 import ClassesCarousel from "./ClassesCarousel";
 import Tutors from "./Tutors";
 import Features from "./Features";
+import Testimonials from "./Testimonials";
 
 const sectionComponents = {
   "sections.hero": Hero,
@@ -14,6 +15,7 @@ const sectionComponents = {
   "sections.classes-carousel": ClassesCarousel,
   "sections.tutors": Tutors,
   "sections.features": Features,
+  "sections.testimonials": Testimonials
 };
 
 const Section = ({ sectionData }) => {

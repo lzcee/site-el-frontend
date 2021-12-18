@@ -36,7 +36,7 @@ const ClassesCarousel = ({ data }) => {
       <div className={styles.carouselWrapper}>
         <Carousel>
           {data.Class.map((classCardData) => (
-            <ClassCard key={classCardData} classCardData={classCardData} />
+            <ClassCard key={classCardData.id} classCardData={classCardData} />
           ))}
         </Carousel>
       </div>

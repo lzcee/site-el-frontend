@@ -22,7 +22,8 @@
     }
 
     &:disabled {
-      display: none;
+      opacity: 0.2;
+      pointer-events: none;
     }
   }
 

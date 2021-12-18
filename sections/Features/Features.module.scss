@@ -13,14 +13,11 @@
   }
 
   .featuresWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -24px;
+    display: grid;
     justify-content: center;
+    gap: 24px;
 
     .feature {
-      max-width: 350px;
-      margin-top: 24px;
       display: flex;
       align-items: center;
 
@@ -44,6 +41,14 @@
   }
 }
 
+@include tablet {
+  .features {
+    .featuresWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @include desktop {
   .features {
     padding: 58px 0;
@@ -53,11 +58,12 @@
     }
 
     .featuresWrapper {
-      margin-top: 0;
+      max-width: 1013px;
+      margin: 0 auto;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 0;
 
       .feature {
-        max-width: 210px;
-        margin: 0;
         padding: 6px 16px;
         box-sizing: border-box;
         flex-direction: column;
@@ -84,6 +90,7 @@
             margin-bottom: 16px;
             font-size: 20px;
             line-height: 22px;
+            min-height: 44px;
             flex-grow: 1;
           }
 
