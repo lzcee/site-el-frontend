@@ -1,0 +1,99 @@
+@import "styles/commons/mixins";
+
+.features {
+  padding: 28px 0;
+  background-color: var(--grayscale-2);
+
+  .title {
+    margin-bottom: 16px;
+
+    &::before {
+      color: var(--base);
+    }
+  }
+
+  .featuresWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+    justify-content: center;
+
+    .feature {
+      max-width: 350px;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+
+      .featureIconWrapper {
+        position: relative;
+        min-width: 50px;
+        margin-right: 36px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .featureContent {
+        border-left: 2px solid var(--orange-secondary);
+        padding: 6px 0 6px 12px;
+
+        .featureTitle {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .features {
+    padding: 58px 0;
+
+    .title {
+      margin-bottom: 75px;
+    }
+
+    .featuresWrapper {
+      margin-top: 0;
+
+      .feature {
+        max-width: 210px;
+        margin: 0;
+        padding: 6px 16px;
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+
+        &:not(:first-child) {
+          border-left: 2px solid var(--orange-secondary);
+        }
+
+        .featureIconWrapper {
+          width: 80px;
+          height: 80px;
+          margin: 0 0 27px;
+        }
+
+        .featureContent {
+          border-left: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+
+          .featureTitle {
+            margin-bottom: 16px;
+            font-size: 20px;
+            line-height: 22px;
+            flex-grow: 1;
+          }
+
+          .featureDescription {
+            font-size: 18px;
+            line-height: 24px;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+}

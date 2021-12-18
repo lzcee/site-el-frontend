@@ -5,7 +5,6 @@ import SocialNetwork from "../../components/SocialNetwork";
 import styles from "./Tutors.module.scss";
 
 const Tutors = ({ data }) => {
-  console.log(data);
   return (
     <section className={styles.tutors}>
       <div className="container">

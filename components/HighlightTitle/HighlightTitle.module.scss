@@ -6,6 +6,7 @@
   line-height: 22px;
   padding: 14px;
   text-transform: uppercase;
+  z-index: 1;
 
   &::before {
     content: attr(data-before);

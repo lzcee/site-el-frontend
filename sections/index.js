@@ -5,6 +5,7 @@ import HorizontalVideoBox from "./HorizontalVideoBox";
 import HoverPillarsBox from "./HoverPillarsBox";
 import ClassesCarousel from "./ClassesCarousel";
 import Tutors from "./Tutors";
+import Features from "./Features";
 
 const sectionComponents = {
   "sections.hero": Hero,
@@ -12,6 +13,7 @@ const sectionComponents = {
   "sections.hover-pillars-box": HoverPillarsBox,
   "sections.classes-carousel": ClassesCarousel,
   "sections.tutors": Tutors,
+  "sections.features": Features,
 };
 
 const Section = ({ sectionData }) => {
