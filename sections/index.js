@@ -7,6 +7,7 @@ import ClassesCarousel from "./ClassesCarousel";
 import Tutors from "./Tutors";
 import Features from "./Features";
 import Testimonials from "./Testimonials";
+import Faq from "./Faq";
 
 const sectionComponents = {
   "sections.hero": Hero,
@@ -15,7 +16,8 @@ const sectionComponents = {
   "sections.classes-carousel": ClassesCarousel,
   "sections.tutors": Tutors,
   "sections.features": Features,
-  "sections.testimonials": Testimonials
+  "sections.testimonials": Testimonials,
+  "sections.faq": Faq,
 };
 
 const Section = ({ sectionData }) => {

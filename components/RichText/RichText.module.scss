@@ -17,6 +17,15 @@
       margin-bottom: 6px;
     }
   }
+
+  a{
+    text-decoration: underline;
+    color: var(--grayscale-5);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }
 
 @include desktop {
