@@ -96,6 +96,7 @@
       margin-bottom: 22px;
 
       &::after {
+        width: calc(var(--container-margin) + 56px);
         height: 6px;
       }
     }

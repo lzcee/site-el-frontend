@@ -22,7 +22,7 @@
 
       &:hover {
         opacity: 0.8;
-        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.60);
+        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.6);
       }
     }
   }
@@ -36,7 +36,18 @@
       &:hover {
         color: var(--base);
         background: var(--primary);
-        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.60);
+        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.6);
+      }
+    }
+    &-orange {
+      background: transparent;
+      color: var(--orange-secondary);
+      border-color: var(--orange-secondary);
+
+      &:hover {
+        color: var(--base);
+        background: var(--orange-secondary);
+        box-shadow: 1px 1px 18px 0px rgba(136, 136, 136, 0.6);
       }
     }
   }

@@ -1,0 +1,76 @@
+@import "styles/commons/mixins";
+
+.b2bBanner {
+  padding: 46px 0;
+  background-color: var(--grayscale-2);
+
+  .flexWrapper {
+    .contentWrapper {
+      .title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+
+      .description {
+        font-family: var(--font-family-heading);
+        font-size: 18px;
+        line-height: 22px;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        &-orange {
+          strong {
+            color: var(--orange-secondary);
+          }
+        }
+
+        &-blue {
+          strong {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+    .buttonWrapper {
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+}
+
+@include desktop {
+  .b2bBanner {
+    padding: 94px 0;
+
+    .flexWrapper {
+      padding: 0 105px;
+      display: grid;
+      column-gap: 122px;
+      grid-template-columns: 1fr 288px;
+      align-items: center;
+
+      .contentWrapper {
+        .title {
+          font-size: 33px;
+          line-height: 44px;
+        }
+
+        .description {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      .buttonWrapper {
+        margin-top: 0;
+
+        .button {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}
