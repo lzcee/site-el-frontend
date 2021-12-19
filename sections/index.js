@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import Faq from "./Faq";
 import SignUpBanner from "./SignUpBanner";
 import B2BBanner from "./B2BBanner";
+import Contact from "./Contact";
 
 const sectionComponents = {
   "sections.hero": Hero,
@@ -22,6 +23,7 @@ const sectionComponents = {
   "sections.faq": Faq,
   "sections.sign-up-banner": SignUpBanner,
   "sections.b2-b-banner": B2BBanner,
+  "sections.contact": Contact,
 };
 
 const Section = ({ sectionData }) => {
