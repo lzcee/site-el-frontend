@@ -51,13 +51,15 @@
   }
 
   .buttonWrapper {
-    margin: 18px var(--container-margin);
+    margin: 18px var(--container-margin) 0;
     text-align: center;
   }
 }
 
 @include desktop {
   .classesCarousel {
+    padding-bottom: 58px;
+    
     .title {
       margin-bottom: 18px;
     }
