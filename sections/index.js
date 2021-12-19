@@ -8,6 +8,7 @@ import Tutors from "./Tutors";
 import Features from "./Features";
 import Testimonials from "./Testimonials";
 import Faq from "./Faq";
+import SignUpBanner from "./SignUpBanner";
 
 const sectionComponents = {
   "sections.hero": Hero,
@@ -18,6 +19,7 @@ const sectionComponents = {
   "sections.features": Features,
   "sections.testimonials": Testimonials,
   "sections.faq": Faq,
+  "sections.sign-up-banner": SignUpBanner,
 };
 
 const Section = ({ sectionData }) => {

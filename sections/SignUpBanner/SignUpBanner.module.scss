@@ -1,0 +1,143 @@
+@import "styles/commons/mixins";
+
+.signUpBanner {
+  padding-top: 28px;
+
+  .title {
+    position: relative;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 0 0 12px var(--container-margin);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 4px;
+      width: calc(var(--container-margin) + 36px);
+      background-color: var(--orange-secondary);
+    }
+  }
+
+  .box {
+    background-color: var(--blue-secondary);
+    padding: 24px;
+
+    .featuresWrapper {
+      display: grid;
+      row-gap: 32px;
+      justify-content: center;
+      margin-bottom: 32px;
+
+      .feature {
+        display: flex;
+        align-items: center;
+
+        .featureIconWrapper {
+          position: relative;
+          min-width: 38px;
+          width: 38px;
+          height: 38px;
+        }
+
+        .featureContent {
+          margin-left: 10px;
+
+          .featureTitle {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 5px;
+            color: var(--primary);
+          }
+
+          .featureDescription {
+            font-family: var(--font-family-heading);
+            line-height: 19px;
+            color: var(--base);
+
+            p {
+              margin-bottom: 0;
+            }
+
+            strong {
+              font-size: 20px;
+            }
+
+            em {
+              font-size: 12px;
+
+              &::before {
+                content: "*";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .buttonWrapper {
+      text-align: center;
+    }
+  }
+}
+
+@include desktop {
+  .signUpBanner {
+    padding-top: 48px;
+
+    .title {
+      font-size: 33px;
+      line-height: 44px;
+      padding-bottom: 14px;
+      margin-bottom: 22px;
+
+      &::after {
+        height: 6px;
+      }
+    }
+
+    .box {
+      background-color: var(--blue-secondary);
+      padding: 32px 100px;
+
+      .featuresWrapper {
+        gap: 36px;
+        grid-template-columns: repeat(3, 210px);
+        justify-content: space-between;
+        margin-bottom: 36px;
+
+        .feature {
+          flex-direction: column;
+
+          .featureIconWrapper {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+          }
+
+          .featureContent {
+            margin-left: 0;
+            text-align: center;
+
+            .featureTitle {
+              margin-bottom: 8px;
+            }
+
+            .featureDescription {
+              font-size: 24px;
+              line-height: 32px;
+
+              strong {
+                font-size: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

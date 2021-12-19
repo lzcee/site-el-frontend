@@ -1,4 +1,5 @@
-import Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import styles from "./RichText.module.scss";
 
 const RichText = ({ className, children }) => {
@@ -7,7 +8,11 @@ const RichText = ({ className, children }) => {
     richTextClassName = `${richTextClassName} ${className}`;
   }
 
-  return <Markdown className={richTextClassName}>{children}</Markdown>;
+  return (
+    <ReactMarkdown className={richTextClassName} remarkPlugins={[remarkGfm]}>
+      {children}
+    </ReactMarkdown>
+  );
 };
 
 export default RichText;

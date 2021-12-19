@@ -1,5 +1,6 @@
 import HighlightTitle from "../../components/HighlightTitle";
 import NextImage from "../../components/NextImage";
+import RichText from "../../components/RichText";
 
 import styles from "./Features.module.scss";
 
@@ -26,9 +27,9 @@ const Features = ({ data }) => {
                   <h3 className={styles.featureTitle}>{feature.Title}</h3>
                 )}
                 {feature.Description && (
-                  <p className={styles.featureDescription}>
+                  <RichText className={styles.featureDescription}>
                     {feature.Description}
-                  </p>
+                  </RichText>
                 )}
               </div>
             </div>
