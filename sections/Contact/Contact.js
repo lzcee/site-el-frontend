@@ -1,5 +1,6 @@
 import NextImage from "../../components/NextImage";
 import SectionTitle from "../../components/SectionTitle";
+import Button from "../../components/Button";
 
 import styles from "./Contact.module.scss";
 
@@ -53,23 +54,28 @@ const Contact = ({ data }) => {
         <div className={styles.content}>
           {data.WhatsApp && (
             <p className={styles.linkItem}>
-              <a
-                href={`https://api.whatsapp.com/send?phone=55${data.WhatsApp.replace(
-                  /[\(\)\s\-]/g,
-                  ""
-                )}&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Escola%20de%20L%C3%ADderes!`}
+              <Button
+                linkSettings={{
+                  url: `https://api.whatsapp.com/send?phone=55${data.WhatsApp.replace(
+                    /[\(\)\s\-]/g,
+                    ""
+                  )}&text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Escola%20de%20L%C3%ADderes!`,
+                }}
                 aria-label={data.WhatsApp}
               >
                 <IconWhatsApp />
-              </a>
+              </Button>
               {data.WhatsApp}
             </p>
           )}
           {data.Email && (
             <p className={styles.linkItem}>
-              <a href={`mailto:${data.Email}`} aria-label={data.Email}>
+              <Button
+                linkSettings={{ url: `mailto:${data.Email}` }}
+                aria-label={data.Email}
+              >
                 <IconEmail />
-              </a>
+              </Button>
               {data.Email}
             </p>
           )}
