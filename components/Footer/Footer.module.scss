@@ -1,0 +1,143 @@
+@import "styles/commons/mixins";
+
+.footer {
+  padding: 48px 0;
+  background-color: var(--blue-secondary);
+  color: var(--base);
+  font-family: var(--font-family-heading);
+
+  .topBox {
+    .info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 38px;
+
+      .logoWrapper {
+        position: relative;
+        flex-shrink: 0;
+        width: 108px;
+        height: 41px;
+        margin-right: 46px;
+      }
+
+      .description {
+        font-size: 12px;
+      }
+    }
+
+    .links {
+      ul {
+        padding-left: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 35px;
+        align-items: center;
+        max-width: 622px;
+        box-sizing: border-box;
+
+        .link {
+          display: inline-block;
+          font-size: 14px;
+          padding: 8px 0;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomBox {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid var(--base);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .socialNetworksTitle {
+      font-size: 12px;
+      margin-right: 28px;
+    }
+
+    .socialNetworks {
+      flex-shrink: 0;
+
+      .socialNetwork {
+        width: 20px;
+        height: 20px;
+
+        &:not(:last-child) {
+          margin-right: 28px;
+        }
+
+        svg {
+          fill: var(--base);
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    padding: 58px 0;
+
+    .topBox {
+      display: grid;
+      grid-template-columns: 296px 1fr;
+      column-gap: 224px;
+
+      .info {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        .logoWrapper {
+          width: 148px;
+          height: 57px;
+          margin-right: 0;
+        }
+
+        .description {
+          margin-top: 29px;
+          min-width: 100%;
+          font-size: 16px;
+        }
+      }
+
+      .links {
+        ul {
+          column-gap: 190px;
+
+          .link {
+            font-size: 20px;
+            line-height: 28px;
+            padding: 9px 0;
+          }
+        }
+      }
+    }
+
+    .bottomBox {
+      margin-top: 43px;
+      padding-top: 31px;
+
+      .socialNetworksTitle {
+        font-size: 14px;
+        margin-right: 74px;
+      }
+
+      .socialNetworks {
+        .socialNetwork {
+          width: 32px;
+          height: 32px;
+
+          &:not(:last-child) {
+            margin-right: 74px;
+          }
+        }
+      }
+    }
+  }
+}
