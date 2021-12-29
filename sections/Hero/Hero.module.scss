@@ -2,13 +2,21 @@
 
 .hero {
   position: relative;
-  padding-top: 195px;
+  padding-top: 64px;
   width: 100%;
 
   .title,
-  .contentWrapper {
+  .contentWrapper,
+  .logoWrapper {
     position: relative;
     z-index: 1;
+  }
+
+  .logoWrapper {
+    position: relative;
+    width: 108px;
+    height: 41px;
+    margin-bottom: 37px;
   }
 
   .title {
@@ -78,7 +86,12 @@
 
 @include desktop {
   .hero {
-    padding-top: 79px;
+    padding-top: 58px;
+
+    .logoWrapper {
+      width: 176px;
+      height: 68px;
+    }
 
     .title {
       max-width: 716px;

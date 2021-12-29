@@ -6,8 +6,23 @@ import styles from "./Hero.module.scss";
 const Hero = ({ data }) => {
   return (
     <section className={styles.hero}>
-      <NextImage media={data.BackgroundImage} priority layout="fill" objectFit="cover"/>
+      <NextImage
+        media={data.BackgroundImage}
+        priority
+        layout="fill"
+        objectFit="cover"
+      />
       <div className="container">
+        {data.Logo && (
+          <div className={styles.logoWrapper}>
+            <NextImage
+              className={styles.logo}
+              media={data.Logo}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        )}
         <h1 className={styles.title}>
           {data.SmallTitle}
           <span>{data.Title}</span>
