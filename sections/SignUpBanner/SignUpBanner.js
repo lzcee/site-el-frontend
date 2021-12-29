@@ -6,7 +6,7 @@ import styles from "./SignUpBanner.module.scss";
 
 const SignUpBanner = ({ data }) => {
   return (
-    <section className={styles.signUpBanner}>
+    <section className={styles.signUpBanner} id={data.SectionAnchorName}>
       <h2 className={styles.title}>{data.Title}</h2>
       <div className="container">
         <div className={styles.box}>

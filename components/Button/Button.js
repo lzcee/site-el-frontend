@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./Button.module.scss";
 
 const Button = ({
@@ -15,16 +17,16 @@ const Button = ({
 
   if (linkSettings) {
     return (
-      <a
+      <Link
         {...rest}
-        className={buttonClassName}
         href={linkSettings.url}
         {...(linkSettings.newTab
           ? 'target="_blank" rel="noopener noreferer'
           : "")}
+        passHref
       >
-        {children}
-      </a>
+        <a className={buttonClassName}>{children}</a>
+      </Link>
     );
   }
 

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import NextImage from "../NextImage";
 import RichText from "../RichText";
 import SocialNetwork from "../SocialNetwork";
@@ -29,15 +31,15 @@ const Footer = ({ data }) => {
               <ul>
                 {data.Links.map((link) => (
                   <li key={link.id}>
-                    <a
-                      className={styles.link}
+                    <Link
+                      passHref
                       href={link.url}
                       {...(link.newTab
                         ? 'target="_blank" rel="noopener noreferer'
                         : "")}
                     >
-                      {link.text}
-                    </a>
+                      <a className={styles.link}>{link.text}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
