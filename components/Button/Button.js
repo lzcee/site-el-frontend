@@ -18,14 +18,13 @@ const Button = ({
   if (linkSettings) {
     return (
       <Link
-        {...rest}
         href={linkSettings.url}
         {...(linkSettings.newTab
           ? 'target="_blank" rel="noopener noreferer'
           : "")}
         passHref
       >
-        <a className={buttonClassName}>{children}</a>
+        <a className={buttonClassName} {...rest}>{children}</a>
       </Link>
     );
   }

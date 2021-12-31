@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./SocialNetwork.module.scss";
 
 const IconYoutube = () => {
@@ -59,6 +58,7 @@ const SocialNetwork = ({ className, data, ...rest }) => {
     <a
       {...rest}
       className={socialNetworkClassName}
+      aria-label={data.Type}
       href={data.Url}
       target="_blank"
       rel="noopener noreferrer"
