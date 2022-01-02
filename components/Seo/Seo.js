@@ -13,9 +13,9 @@ const Seo = ({ metadata }) => {
         description: metadata.metaDescription,
         ...(metadata.shareImage && {
           images: {
-            url: getStrapiMedia(image.url),
-            width: image.width,
-            height: image.height,
+            url: getStrapiMedia(metadata.shareImage.url),
+            width: metadata.shareImage.width,
+            height: metadata.shareImage.height,
           },
         }),
       }}
