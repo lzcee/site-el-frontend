@@ -12,11 +12,13 @@ const Seo = ({ metadata }) => {
         title: metadata.metaTitle,
         description: metadata.metaDescription,
         ...(metadata.shareImage && {
-          images: {
-            url: getStrapiMedia(metadata.shareImage.url),
-            width: metadata.shareImage.width,
-            height: metadata.shareImage.height,
-          },
+          images: [
+            {
+              url: getStrapiMedia(metadata.shareImage.url),
+              width: metadata.shareImage.width,
+              height: metadata.shareImage.height,
+            },
+          ],
         }),
       }}
       twitter={{
