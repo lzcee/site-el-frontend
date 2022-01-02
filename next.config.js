@@ -10,6 +10,6 @@ module.exports = {
     defaultLocale: 'pt-BR',
   },
   images: {
-    domains: ['localhost', 'i.ytimg.com'],
+    domains: ['localhost', 'i.ytimg.com', '54.233.192.244', 'escoladelideres.io'],
   },
 }
