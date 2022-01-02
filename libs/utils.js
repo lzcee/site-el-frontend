@@ -1,5 +1,5 @@
 export function getStrapiURL(path) {
-    return `${'http://escoladelideres.io/server' || 'http://localhost:1337'
+    return `${'https://escoladelideres.io/server' || 'http://localhost:1337'
         }${path}`
 }
 
